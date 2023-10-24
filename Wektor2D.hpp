@@ -15,8 +15,15 @@ public:
     }
     void setX(double a) { x = a; }
     void setY(double a) { y = a; }
-        
+    double getX() { return x; }
+    double getY() { return y; }
+
 private:
     double x;
     double y;
 };
+
+Wektor2D operator+(Wektor2D A, Wektor2D B) {
+    Wektor2D C{ A.getX() + B.getX(), A.getY() + B.getY() };
+    return C;
+}
