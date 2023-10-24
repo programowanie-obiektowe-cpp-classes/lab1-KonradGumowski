@@ -3,12 +3,20 @@ class Wektor2D
 {
 public:
     Wektor2D() { }
-    int norm() {
+    Wektor2D(double a, double b) {
+        x = a; y = b;
+        std::cout<<"pobralem wartosci" << std::endl;
+    }
+    double norm() {
         return sqrt(x * x + y * y);
     }
     void print() {
-        std::cout << 333333 << std::endl;
+        std::cout << norm() << std::endl;
     }
-    int x;
-    int y;
+    void setX(double a) { x = a; }
+    void setY(double a) { y = a; }
+        
+private:
+    double x;
+    double y;
 };
